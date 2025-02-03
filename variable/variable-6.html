@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 변수 종류 배열을 사용한 변수
+      var fruits = ["apple", "banana", "orange", "mango", "grape"];
+      console.log(fruits);
+      console.log(fruits[0]);
+      console.log(fruits[1]);
+      console.log(fruits[2]);
+      console.log(fruits[3]);
+      console.log(fruits.length); // .은 '의'라는 의미다. (fruits의 length값은?)
+      // 변수종류 객체를 사용한 변수
+      var person = {
+        name: "김할리",
+        age: 4,
+        isStudent: false,
+      };
+      console.log(person.name);
+      console.log(person.age);
+      console.log(person.isStudent);
+      // 여러명의 객체를 접근하는 방법
+      var persons = [
+        {
+          name: "김할리",
+          age: 4,
+          isStudent: true,
+        },
+        {
+          name: "김체리",
+          age: 5,
+          isStudent: false,
+        },
+        {
+          name: "오진돌",
+          age: 7,
+          isStudent: false,
+        },
+        {
+          name: "오봄",
+          age: 6,
+          isStudent: false,
+        },
+        {
+          name: "박콩",
+          age: 6,
+          isStudent: false,
+        },
+      ];
+      console.log(persons);
+      console.log(persons.length);
+      console.log(persons[4].name);
+      console.log(persons[4].age);
+      console.log(persons[4].isStudent);
+      console.log(persons[1].name);
+      console.log(persons[1].age);
+      console.log(persons[1].isStudent);
+      console.log(persons[0].name);
+      console.log(persons[0].age);
+    </script>
+  </body>
+</html>

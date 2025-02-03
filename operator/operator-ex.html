@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비교연산자 예제</title>
+  </head>
+  <body>
+    <h2>로그인</h2>
+    <form>
+      <label for="userName">username:</label>
+      <input type="text" id="userName" name="userName" /> <br />
+      <label for="password">password:</label>
+      <input type="text" id="password" name="password" /> <br />
+      <button type="button" id="loginBt">LOGIN</button>
+    </form>
+    <p id="message"></p>
+    <script>
+      // 저장된 사용자 아이디랑 비밀번호를 더미데이터에 저장한다.
+      const storeUser = {
+        userName: "harleya",
+        password: "1212",
+      };
+      // 버튼저장
+      const loginBt = document.querySelector("#loginBt");
+      // 유효성검사한 메시지 저장
+      const message = document.querySelector("#message");
+      loginBt.addEventListener("click", function () {
+        // 입력되는 데이터를 저장
+        const username = document.querySelector("#userName").value;
+        // console.log(userName);
+        const passWord = document.querySelector("#password").value;
+        // console.log(password);
+        // 입력된 데이터와 저장된 더미데이터의 값을 비교한다.
+        // if (username === storeUser.userName && passWord === storeUser.password) {
+        //   message.textContent = "로그인 성공";
+        // } else {
+        //   message.textContent = "정보가 일치하지 않습니다.";
+        // }
+        if (username !== storeUser.userName && passWord !== storeUser.password) {
+          message.textContent = "이름과 비밀번호가 일치하지 않습니다.";
+        } else if (username !== storeUser.userName) {
+          message.textContent = "이름이 일치하지 않습니다.";
+        } else if (passWord !== storeUser.password) {
+          message.textContent = "비밀번호가 일치하지 않습니다.";
+        } else {
+          message.textContent = "로그인 성공";
+        }
+      });
+    </script>
+  </body>
+</html>
