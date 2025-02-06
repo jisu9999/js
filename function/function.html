@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+<body>
+    <button onclick="greeting()">클릭</button>
+    <!-- 함수 재사용 -->
+    <button onclick="greeting()">안녕</button>
+    <script>
+        function greeting(name){ // greeting 옆 괄호 안에 들어가는 것 '매개변수'
+            // alert('안녕')
+            // alert(`안녕하세요 ${name}`)
+            let message1 = `안녕하세요 ${name} ♥`
+            alert(message1)
+        }
+        // greeting()
+        let message = greeting('김할리') //함수명 옆 괄호 안에 들어가는 것을 '인수'라고한다.
+        // document.write(`${message}`)
+    </script>
+</body>
+</html>
